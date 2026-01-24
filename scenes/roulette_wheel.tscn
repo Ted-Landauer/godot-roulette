@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn3bysr0vwcw4"]
+
+[ext_resource type="Texture2D" uid="uid://cs2bp65hb6kai" path="res://assets/Roulette Images/Wheel.png" id="1_1o7vs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7td6c"]
+atlas = ExtResource("1_1o7vs")
+region = Rect2(0, 0, 2470, 2470)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yknb5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7td6c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RouletteWheel" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-42, 22)
+sprite_frames = SubResource("SpriteFrames_yknb5")
