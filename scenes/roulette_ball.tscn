@@ -1,29 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpfhms5pfvnrj"]
+[gd_scene load_steps=3 format=3 uid="uid://dpfhms5pfvnrj"]
 
 [ext_resource type="Texture2D" uid="uid://dm3mf3ihyd38n" path="res://assets/Roulette Images/Marble.png" id="1_e7r1r"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rlnod"]
-atlas = ExtResource("1_e7r1r")
-region = Rect2(0, 0, 91, 91)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ra0st"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rlnod")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_8qtki"]
-radius = 43.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_e7r1r"]
+radius = 40.444416
 
 [node name="RouletteBall" type="CharacterBody2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_ra0st")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.8146973e-06, 3.8146973e-06)
+scale = Vector2(0.14835165, 0.14835165)
+texture = ExtResource("1_e7r1r")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_8qtki")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+shape = SubResource("CircleShape2D_e7r1r")
