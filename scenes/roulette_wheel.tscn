@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn3bysr0vwcw4"]
+[gd_scene format=3 uid="uid://dn3bysr0vwcw4"]
 
 [ext_resource type="Texture2D" uid="uid://cs2bp65hb6kai" path="res://assets/Roulette Images/Wheel.png" id="1_1o7vs"]
 [ext_resource type="Script" uid="uid://t1b7mirfgkfm" path="res://scripts/roulette_wheel.gd" id="1_7td6c"]
 
-[node name="rouletteWheel" type="Area2D"]
+[node name="rouletteWheel" type="Area2D" unique_id=430504076]
 script = ExtResource("1_7td6c")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2068120493]
 scale = Vector2(0.084, 0.084)
 texture = ExtResource("1_1o7vs")
