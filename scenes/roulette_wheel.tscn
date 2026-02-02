@@ -3,9 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://cs2bp65hb6kai" path="res://assets/Roulette Images/Wheel.png" id="1_1o7vs"]
 [ext_resource type="Script" uid="uid://t1b7mirfgkfm" path="res://scripts/roulette_wheel.gd" id="1_7td6c"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7td6c"]
+radius = 857.2256
+
 [node name="rouletteWheel" type="Area2D" unique_id=430504076]
 script = ExtResource("1_7td6c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2068120493]
 scale = Vector2(0.084, 0.084)
 texture = ExtResource("1_1o7vs")
+
+[node name="InnerWall" type="CollisionShape2D" parent="Sprite2D" unique_id=1541857787]
+shape = SubResource("CircleShape2D_7td6c")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D" unique_id=1605108850]
+polygon = PackedVector2Array(0, 1107.143, 190.4762, 1095.2382, 369.04764, 1047.6191, 535.7143, 976.1905, 702.381, 880.9524, 809.5238, 761.9048, 976.1905, 535.7143, 1083.3334, 238.09525, 1119.0476, -119.04762, 988.0953, -523.8096, 761.9048, -833.3334, 488.09525, -1011.9048, 142.85715, -1107.143, -261.9048, -1095.2382, -607.1429, -940.4762, -892.8572, -690.4762, -1047.6191, -392.85715, -1130.9524, -59.52381, -1071.4286, 333.33334, -928.5715, 619.0476, -654.7619, 916.6667, -369.04764, 1059.5238, -83.333336, 1107.143, 0, 1142.8572, 0, 1238.0952, -392.85715, 1154.762, -785.7143, 952.381, -1035.7144, 654.7619, -1202.381, 273.80954, -1226.1906, -142.85715, -1095.2382, -571.4286, -809.5238, -940.4762, -345.2381, -1202.381, 250, -1226.1906, 666.6667, -1035.7144, 1023.8096, -714.28577, 1190.4762, -345.2381, 1238.0952, 35.714287, 1166.6667, 416.6667, 1000, 714.28577, 761.9048, 952.381, 357.14288, 1190.4762, 47.61905, 1226.1906, -83.333336, 1095.2382)

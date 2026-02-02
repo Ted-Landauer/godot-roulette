@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dn3bysr0vwcw4" path="res://scenes/roulette_wheel.tscn" id="2_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cjkcfbq41juri" path="res://assets/Roulette Images/Spritesheet.png" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dpfhms5pfvnrj" path="res://scenes/roulette_ball.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://3u7f4rjvn6t" path="res://scenes/blue_chip.tscn" id="4_p57ef"]
+[ext_resource type="Script" uid="uid://ccfhrul7c0ww4" path="res://scripts/blue_chip.gd" id="5_gee14"]
+[ext_resource type="PackedScene" uid="uid://ci00f2b00lxuy" path="res://scenes/purple_chip.tscn" id="5_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://b7iko31p22r00" path="res://scenes/yellow_chip.tscn" id="6_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("2_lnu2h")
@@ -200,7 +204,7 @@ zoom = Vector2(2.5, 2.5)
 
 [node name="RouletteBall" parent="." unique_id=2061968651 instance=ExtResource("2_yqjtg")]
 z_index = 2
-position = Vector2(462, 96)
+position = Vector2(416, 50)
 
 [node name="roulette_wheel" parent="." unique_id=1602981765 instance=ExtResource("2_lbhrr")]
 z_index = 1
@@ -228,6 +232,21 @@ tile_map_data = PackedByteArray("AAD7/wMAAAABAAMAAAD7/wQAAAABAAMAAAD//wMAAAABAAM
 tile_set = SubResource("TileSet_p57ef")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
+
+[node name="Chips" type="Node" parent="." unique_id=269952076]
+
+[node name="Blue Chip" parent="Chips" unique_id=1624006516 instance=ExtResource("4_p57ef")]
+position = Vector2(344.00003, 130.5)
+scale = Vector2(0.15865384, 0.15865384)
+script = ExtResource("5_gee14")
+
+[node name="Purple Chip" parent="Chips" unique_id=1810729416 instance=ExtResource("5_u5sy4")]
+position = Vector2(388, 130.5)
+scale = Vector2(0.15865386, 0.15865386)
+
+[node name="Yellow Chip" parent="Chips" unique_id=736563385 instance=ExtResource("6_gee14")]
+position = Vector2(431, 130.50002)
+scale = Vector2(0.15865384, 0.15865384)
 
 [node name="Labels" type="Node" parent="." unique_id=2023540416]
 
@@ -388,3 +407,41 @@ offset_bottom = 156.0
 theme_override_font_sizes/font_size = 16
 text = "1 to 18     Even       Red       Black      Odd     19 to 36"
 horizontal_alignment = 1
+
+[node name="Chip Values" type="Label" parent="Labels" unique_id=1636282008]
+offset_left = 340.0
+offset_top = 118.5
+offset_right = 442.0
+offset_bottom = 145.5
+text = "5       10      25"
+
+[node name="BlueChipAmount" type="Label" parent="Labels" unique_id=159304996]
+offset_left = 339.0
+offset_top = 147.5
+offset_right = 352.0
+offset_bottom = 170.5
+text = "0"
+horizontal_alignment = 1
+
+[node name="PurpleChipAmount" type="Label" parent="Labels" unique_id=1273586102]
+offset_left = 381.0
+offset_top = 147.5
+offset_right = 395.0
+offset_bottom = 170.5
+text = "0"
+horizontal_alignment = 1
+
+[node name="YellowChipAmount" type="Label" parent="Labels" unique_id=631257662]
+offset_left = 426.0
+offset_top = 147.5
+offset_right = 438.0
+offset_bottom = 170.5
+text = "0"
+horizontal_alignment = 1
+
+[node name="Owned" type="Label" parent="Labels" unique_id=615787159]
+offset_left = 269.0
+offset_top = 147.0
+offset_right = 329.0
+offset_bottom = 170.0
+text = "Owned:"

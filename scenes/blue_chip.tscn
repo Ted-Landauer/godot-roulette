@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://3u7f4rjvn6t"]
+
+[ext_resource type="Texture2D" uid="uid://xlr8dqegf0xj" path="res://assets/Roulette Images/Chip_Blue.png" id="1_ryt26"]
+
+[node name="Blue Chip" type="Sprite2D" unique_id=1624006516]
+texture = ExtResource("1_ryt26")
