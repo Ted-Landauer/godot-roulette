@@ -4,15 +4,17 @@
 [ext_resource type="Script" uid="uid://dn08gcwr384od" path="res://scripts/roulette_ball.gd" id="1_rlnod"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e7r1r"]
-radius = 40.444416
+radius = 40.444443
 
 [node name="RouletteBall" type="CharacterBody2D" unique_id=1515054465]
 script = ExtResource("1_rlnod")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=62406952]
 position = Vector2(3.8146973e-06, 3.8146973e-06)
-scale = Vector2(0.14835165, 0.14835165)
+scale = Vector2(0.26373625, 0.26373625)
 texture = ExtResource("1_e7r1r")
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=1059669729]
+position = Vector2(45.49998, 45.49998)
 shape = SubResource("CircleShape2D_e7r1r")

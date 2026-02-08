@@ -4,3 +4,4 @@
 
 [node name="Purple Chip" type="Sprite2D" unique_id=1810729416]
 texture = ExtResource("1_ovwl5")
+centered = false
