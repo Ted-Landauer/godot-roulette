@@ -225,7 +225,7 @@ anchor_mode = 0
 
 [node name="RouletteBall" parent="." unique_id=2061968651 instance=ExtResource("2_yqjtg")]
 z_index = 2
-position = Vector2(1414, 660)
+position = Vector2(1457, 444)
 
 [node name="roulette_wheel" parent="." unique_id=1602981765 instance=ExtResource("2_lbhrr")]
 z_index = 1
