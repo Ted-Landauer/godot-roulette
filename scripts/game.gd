@@ -8,6 +8,8 @@ var yellowChip: = preload("res://scenes/yellow_chip.tscn")
 #variable to determine which chip is needed, 0: blue, 1: purple, 2: yellow
 var chipColor = 0
 
+var randomSelection = RandomNumberGenerator.new()
+
 var inBettingArea = false
 
 # Called when the node enters the scene tree for the first time.
@@ -50,12 +52,12 @@ func spawnYellowChip():
 	add_child(newYellowChip)
 	print("added yellow chip")
 
+
+
 func checkBettingArea():
-	if $BettingArea.mouse_entered():
-		inBettingArea = true
+	if inBettingArea == true:
 		print("in the betting area")
-	elif $BettingArea.mouse_exited():
-		inBettingArea = false
+	elif inBettingArea == false:
 		print("out of betting area")
 
 func _input(event):
@@ -77,6 +79,7 @@ func _input(event):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#checkBettingArea()
 	pass
 	
 
@@ -94,3 +97,24 @@ func _on_yellow_chip_pressed() -> void:
 	print("Yellow Chip Selected")
 	chipColor = 2
 	
+
+
+func _on_timer_timeout() -> void:
+	print("No more bets!")
+	var winningNumber = randomSelection.randi_range(-1, 36)
+	if winningNumber == -1:
+		print("Winner, 00")
+	else:
+		print("Winner, " + str(winningNumber))
+	
+
+
+
+func _on_control_mouse_entered() -> void:
+	print("mouse entered")
+	inBettingArea = true
+
+
+func _on_control_mouse_exited() -> void:
+	print('mouse exited')
+	inBettingArea = false

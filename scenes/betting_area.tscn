@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://djfru3jjt3yik"]
+
+[node name="betting_area" type="Area2D" unique_id=2073057573]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1736301536]
+offset_right = 896.0
+offset_bottom = 512.0
